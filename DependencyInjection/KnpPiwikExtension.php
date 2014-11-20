@@ -46,6 +46,10 @@ class KnpPiwikExtension extends Extension
             $container->setParameter('piwik.connection.http.url', $config['url']);
         }
 
+        if (isset($config['browser'])) {
+            $container->setParameter('piwik.connection.http.browser', $config['browser']);
+        }
+
         if (isset($config['init'])) {
             $container->setParameter('piwik.connection.piwik.init', (bool) $config['init']);
         }
